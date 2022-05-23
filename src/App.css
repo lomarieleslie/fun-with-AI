@@ -42,6 +42,8 @@ h1 {
     font-size: 2.5em;
 }
 
+/* Response List */
+
 h2 {
     font-size: 1rem;
 }
@@ -75,6 +77,8 @@ li {
     font-style: italic;
     text-align: left;
 }
+
+/* Input & Submit */
 
 
 .submitButton {
@@ -130,6 +134,12 @@ li {
     display: flex;
     flex-direction: column;
     gap:20px
+}
+
+/* Loading */
+
+.loading {
+    color: whitesmoke;
 }
 
 

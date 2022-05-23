@@ -4,6 +4,10 @@ import React from "react";
 
 const OpenAI = () => {
 
+  // Initializing Loading state 
+
+  const [loading, setLoading] = useState(true);
+
   // Initialize state and variables to hold user's initial inputs + Open AI response 
 
   const [userInputting, setUserInputting] = useState("");
@@ -48,10 +52,13 @@ const OpenAI = () => {
         if (responseJson.choices) {
           setResults(responseJson.choices);
         }
-
-        console.log(responseJson.choices);
+      }).finally(() => {
+        setLoading(false);
       });
   }, [searchTerm, userPrompt]);
+
+  if (loading) return <p className="loading">'Loading...'</p>
+
 
   const handleInputting = (event) => {
     setUserPhrase(event.target.value);
@@ -95,6 +102,7 @@ const OpenAI = () => {
             {responseHistory.map((prevResponses, i) => {
               if (prevResponses.response.results.length === 0) return null;
               if (prevResponses.prompt.userPrompt === "") return null;
+              
               return (
                 <li key={`prevResponses-${i}`}>
                   <h2>Prompt:</h2>
