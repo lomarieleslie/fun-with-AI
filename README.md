@@ -1,3 +1,62 @@
+
+## Authors
+
+Developer & Designer:
+
+- [@lomarieleslie](https://github.com/lomarieleslie)
+
+
+
+
+
+
+
+
+## Tech Stack
+
+React.js, JSX, CSS, & a little MUI (first time trying this library it out!)
+
+
+
+## OPEN AI API Reference
+
+#### Completions Endpoint
+
+```http
+  POST https://api.openai.com/v1/engines/text-curie-001/completions
+```
+```
+ const data = {
+      prompt: userPrompt,
+      max_tokens: 500,
+      temperature: 1,
+      n: 1,
+      stream: false,
+      logprobs: null,
+    };
+
+```
+
+Deployed via Netlify 
+
+```
+https://funwith-ai.netlify.app/
+
+```
+## Feedback
+
+If you have any feedback, please reach out to me at lorrainemleslie@gmail.com
+
+
+# Fun With AI
+
+Enter a prompt for the OPEN AI to respond to.
+
+
+More Info:
+
+https://beta.openai.com/docs/guides/completion/introduction
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
