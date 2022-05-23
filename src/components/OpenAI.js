@@ -4,9 +4,6 @@ import React from "react";
 
 const OpenAI = () => {
 
-  // Initializing Loading state 
-
-  const [loading, setLoading] = useState(true);
 
   // Initialize state and variables to hold user's initial inputs + Open AI response 
 
@@ -57,7 +54,7 @@ const OpenAI = () => {
       });
   }, [searchTerm, userPrompt]);
 
-  if (loading) return <p className="loading">'Loading...'</p>
+
 
 
   const handleInputting = (event) => {
