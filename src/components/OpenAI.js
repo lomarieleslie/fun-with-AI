@@ -49,8 +49,6 @@ const OpenAI = () => {
         if (responseJson.choices) {
           setResults(responseJson.choices);
         }
-      }).finally(() => {
-        setLoading(false);
       });
   }, [searchTerm, userPrompt]);
 
